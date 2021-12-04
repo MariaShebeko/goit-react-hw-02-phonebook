@@ -12,10 +12,22 @@
   align-items: center;
 }
 
+.iconAddressBook {
+  margin-right: 7px;
+  transition: fill 300ms ease-in-out;
+}
+
 .text {
   font-size: 18px;
   font-weight: bold;
+  transition: color 300ms ease-in-out;
 }
+.item:hover .text,
+.item:hover .iconAddressBook {
+  color: #4f95da;
+  fill: #4f95da;
+}
+
 .button {
   display: flex;
   align-items: center;

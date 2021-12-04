@@ -11,6 +11,12 @@ const ContactList = ({ contacts, onDeleteContact }) => {
       {contacts.map(({ id, name, number }) => (
         <li key={id} className={s.item}>
           <p className={s.text}>
+            <Icon
+              iconName="iconAddressBook"
+              width="18"
+              height="18"
+              className={s.iconAddressBook}
+            />
             {name}: {number}
           </p>
           <button onClick={() => onDeleteContact(id)} className={s.button}>
