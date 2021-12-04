@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import s from './ContactForm.module.css';
 
 class ContactForm extends Component {
   state = {
@@ -26,10 +27,10 @@ class ContactForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label htmlFor={this.nameInputId}>
-          Name
+        <div className={s.inputWrapper}>
           <input
             type="text"
+            className={s.input}
             value={this.state.name}
             onChange={this.handleChange}
             name="name"
@@ -37,11 +38,14 @@ class ContactForm extends Component {
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
             required
           />
-        </label>
-        <label htmlFor={this.numberInputId}>
-          Number
+          <label className={s.label} htmlFor={this.nameInputId}>
+            Name
+          </label>
+        </div>
+        <div className={s.inputWrapper}>
           <input
             type="tel"
+            className={s.input}
             value={this.state.number}
             onChange={this.handleChange}
             name="number"
@@ -49,8 +53,16 @@ class ContactForm extends Component {
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
           />
-        </label>
-        <button type="submit">Add contact</button>
+          <label className={s.label} htmlFor={this.numberInputId}>
+            Number
+          </label>
+        </div>
+        <button className={s.button} type="submit">
+          Add contact
+          {/* <svg className={s.icon} width="18" height="18" fill="#4F95DA">
+            <use href="../../images/symbol-defs.svg#icon-user-plus"></use>
+          </svg> */}
+        </button>
       </form>
     );
   }

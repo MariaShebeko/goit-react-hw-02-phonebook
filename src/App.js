@@ -59,20 +59,18 @@ class App extends Component {
     const filteredContacts = this.getVisibleContacts();
     return (
       <>
-        <Section title={'Phonebook'}>
-          <Container>
+        <Container>
+          <Section title={'Phonebook'}>
             <ContactForm onSubmit={this.formSubmitHandler} />
-          </Container>
-        </Section>
-        <Section title={'Contacts'}>
-          <Container>
+          </Section>
+          <Section title={'Contacts'}>
             <Filter value={filter} onChange={this.changeFilter} />
             <ContactList
               contacts={filteredContacts}
               onDeleteContact={this.deleteContact}
             />
-          </Container>
-        </Section>
+          </Section>
+        </Container>
       </>
     );
   }
