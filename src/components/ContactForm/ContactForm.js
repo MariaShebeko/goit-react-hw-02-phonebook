@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import s from './ContactForm.module.css';
-
+import Icon from '../../helpers/Icon';
 class ContactForm extends Component {
   state = {
     name: '',
@@ -59,9 +59,12 @@ class ContactForm extends Component {
         </div>
         <button className={s.button} type="submit">
           Add contact
-          {/* <svg className={s.icon} width="18" height="18" fill="#4F95DA">
-            <use href="../../images/symbol-defs.svg#icon-user-plus"></use>
-          </svg> */}
+          <Icon
+            iconName="iconUserPlus"
+            width="18"
+            height="18"
+            className={s.iconUserPlus}
+          />
         </button>
       </form>
     );

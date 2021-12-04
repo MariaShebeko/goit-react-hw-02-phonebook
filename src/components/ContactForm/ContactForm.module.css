@@ -35,6 +35,8 @@
 }
 
 .button {
+  display: flex;
+  align-items: center;
   background-color: transparent;
   border: 2px solid #4f95da;
   border-radius: 5px;
@@ -50,6 +52,11 @@
   box-shadow: 0 0 40px 40px #4f95da inset;
 }
 
-/* .icon{
-  fill: black;
-} */
+.iconUserPlus {
+  margin-left: 5px;
+  fill: #4f95da;
+  transition: fill 300ms ease-in-out;
+}
+.button:hover .iconUserPlus {
+  fill: #fff;
+}

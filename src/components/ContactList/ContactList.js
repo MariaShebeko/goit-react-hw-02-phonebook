@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import s from './ContactList.module.css';
+import Icon from '../../helpers/Icon';
 
 const ContactList = ({ contacts, onDeleteContact }) => {
   console.log(contacts);
@@ -14,6 +15,12 @@ const ContactList = ({ contacts, onDeleteContact }) => {
           </p>
           <button onClick={() => onDeleteContact(id)} className={s.button}>
             Delete
+            <Icon
+              iconName="iconBin"
+              width="18"
+              height="18"
+              className={s.iconBin}
+            />
           </button>
         </li>
       ))}

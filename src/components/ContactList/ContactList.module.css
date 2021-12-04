@@ -17,6 +17,8 @@
   font-weight: bold;
 }
 .button {
+  display: flex;
+  align-items: center;
   background-color: transparent;
   border: 2px solid #4f95da;
   border-radius: 5px;
@@ -30,4 +32,13 @@
 .button:hover {
   color: #fff;
   box-shadow: 0 0 40px 40px #4f95da inset;
+}
+
+.iconBin {
+  margin-left: 5px;
+  fill: #4f95da;
+  transition: fill 300ms ease-in-out;
+}
+.button:hover .iconBin {
+  fill: #fff;
 }

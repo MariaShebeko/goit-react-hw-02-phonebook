@@ -8,7 +8,7 @@ import { nanoid } from 'nanoid';
 class App extends Component {
   state = {
     contacts: [
-      { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
+      { id: 'id-1', name: 'Maria Shebeko', number: '111-22-33' },
       { id: 'id-2', name: 'Hermione Kline', number: '443-89-12' },
       { id: 'id-3', name: 'Eden Clements', number: '645-17-79' },
       { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
@@ -26,8 +26,13 @@ class App extends Component {
     const similarContact = contacts.find(
       contact => contact.name === newContact.name,
     );
+    const similarNumber = contacts.find(
+      contact => contact.number === newContact.number,
+    );
     if (similarContact) {
       return alert('This name is allready exist');
+    } else if (similarNumber) {
+      return alert('This number is allready exist');
     }
 
     this.setState(prevState => ({
