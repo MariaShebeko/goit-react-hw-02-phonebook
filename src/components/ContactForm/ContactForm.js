@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import s from './ContactForm.module.css';
-import Icon from '../../helpers/Icon';
+import Icon from '../Icon/Icon';
+import PropTypes from 'prop-types';
 class ContactForm extends Component {
   state = {
     name: '',
@@ -14,8 +15,6 @@ class ContactForm extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    console.log(this.state);
-
     this.props.onSubmit(this.state);
     this.reset();
   };
@@ -70,5 +69,9 @@ class ContactForm extends Component {
     );
   }
 }
+
+ContactForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
 
 export default ContactForm;

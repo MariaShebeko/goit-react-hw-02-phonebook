@@ -1,10 +1,8 @@
 import PropTypes from 'prop-types';
 import s from './ContactList.module.css';
-import Icon from '../../helpers/Icon';
+import Icon from '../Icon/Icon';
 
 const ContactList = ({ contacts, onDeleteContact }) => {
-  console.log(contacts);
-
   return (
     <ul className={s.list}>
       <p className={s.total}>Total amount of contacts: {contacts.length}</p>
